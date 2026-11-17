@@ -1394,13 +1394,122 @@ body::before {
   color: var(--text-muted);
 }
 
+/* Form inside Bharat Khata */
+.khata-add-form {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr auto;
+  gap: 8px;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38px;
+  height: 38px;
+  padding: 10px 8px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--bg-subtle);
+  border-color: var(--primary);
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-toggle.active .hamburger-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+  padding: 16px 20px 24px;
+  max-height: 80vh;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 999;
+}
+
+.mobile-nav-drawer.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: all 0.15s ease;
+}
+
+.mobile-nav-link:hover, .mobile-nav-link:active {
+  background: var(--bg-subtle);
+  color: var(--primary);
+}
+
+.mobile-nav-link.highlight {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  margin-top: 6px;
+  justify-content: center;
+}
+
 /* ===================================================================
-   Responsive Mobile Adjustments
+   Responsive Mobile Adjustments (Comprehensive & Pixel-Perfect)
    =================================================================== */
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
   }
   .hero-content {
     align-items: center;
@@ -1414,7 +1523,10 @@ body::before {
   .sim-grid, .sms-demo-grid, .khata-grid, .download-card {
     grid-template-columns: 1fr;
   }
-  .features-grid, .deploy-steps-grid {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .deploy-steps-grid {
     grid-template-columns: 1fr;
   }
   .footer-grid {
@@ -1425,12 +1537,213 @@ body::before {
   }
 }
 
-@media (max-width: 640px) {
-  .nav-links { display: none; }
-  .hero-title { font-size: 2.35rem; }
-  .sim-hud { grid-template-columns: 1fr; }
-  .entry-form-row { grid-template-columns: 1fr; }
-  .budget-breakdown-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-btn-github {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  .mobile-nav-drawer {
+    display: block;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .navbar .nav-wrapper {
+    height: 64px;
+  }
+  .brand-icon-box {
+    width: 38px;
+    height: 38px;
+  }
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  .brand-tag {
+    font-size: 0.65rem;
+  }
+  .hero {
+    padding: 36px 0 24px;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+    line-height: 1.15;
+  }
+  .hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    padding: 12px 16px;
+    text-align: center;
+  }
+  .hero-trust-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-top: 18px;
+  }
+  .phone-mockup {
+    width: min(300px, 94vw);
+    height: 540px;
+    margin: 0 auto;
+    border-width: 6px;
+  }
+  .phone-notch {
+    width: 90px;
+    height: 16px;
+  }
+  .section {
+    padding: 44px 0;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .section-desc {
+    font-size: 0.9rem;
+  }
+  .mvp-tabs {
+    -webkit-overflow-scrolling: touch;
+  }
+  .mvp-tab-btn {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+  .mvp-tab-content {
+    padding: 20px 12px;
+  }
+  .sim-hud {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .sim-hud-card {
+    padding: 12px 14px;
+  }
+  .sim-hud-value {
+    font-size: 1.35rem;
+  }
+  .quick-spends-row {
+    gap: 6px;
+  }
+  .spend-chip {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+  .entry-form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .sim-ledger-items {
+    max-height: 260px;
+  }
+  .sms-preset-buttons {
+    gap: 6px;
+  }
+  .sms-preset-btn {
+    font-size: 0.78rem;
+    padding: 5px 10px;
+  }
+  .khata-add-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .khata-add-form button {
+    grid-column: span 2;
+  }
+  .budget-breakdown-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .feature-card {
+    padding: 20px 16px;
+  }
+  .download-card {
+    padding: 28px 18px;
+    gap: 24px;
+    border-radius: 18px;
+  }
+  .download-card::after {
+    display: none;
+  }
+  .download-info-title {
+    font-size: clamp(1.6rem, 6vw, 2.1rem);
+  }
+  .download-info-sub {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  .apk-meta-badges {
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .apk-badge {
+    font-size: 0.76rem;
+    padding: 4px 8px;
+  }
+  .download-card .btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+  .install-guide {
+    padding: 16px 12px;
+  }
+  .install-step {
+    font-size: 0.84rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badge-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .apk-meta-badges {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .apk-badge {
+    width: 100%;
+    text-align: center;
+  }
+  .khata-balance-banner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  .khata-balance-banner > div:last-child {
+    text-align: left;
+  }
 }

@@ -4,12 +4,45 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   initTabNavigation();
   initExpenseSimulator();
   initSmsParser();
   initKhataManager();
   initBudgetCalculator();
 });
+
+// ===================================================================
+// Mobile Navigation Menu Toggle
+// ===================================================================
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  if (!menuBtn || !drawer) return;
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    drawer.classList.toggle('open');
+  });
+
+  // Close drawer on clicking any navigation link
+  const drawerLinks = drawer.querySelectorAll('a');
+  drawerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      drawer.classList.remove('open');
+    });
+  });
+
+  // Close when tapping outside the navbar
+  document.addEventListener('click', (e) => {
+    const header = document.querySelector('.navbar');
+    if (header && !header.contains(e.target)) {
+      menuBtn.classList.remove('active');
+      drawer.classList.remove('open');
+    }
+  });
+}
 
 // ===================================================================
 // Tab Navigation

@@ -43,15 +43,34 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="https://github.com/SarveshJoshi242/ExpenseTrackerWebsite" target="_blank" class="btn btn-outline btn-sm">
+        <a href="https://github.com/SarveshJoshi242/ExpenseTrackerWebsite" target="_blank" class="btn btn-outline btn-sm nav-btn-github">
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
+          <span class="btn-text">GitHub</span>
         </a>
         <a href="#download" class="btn btn-emerald btn-sm">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-          Download APK
+          <span>APK</span>
         </a>
+        <button id="mobile-menu-btn" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#simulator" class="mobile-nav-link">📊 Live MVPs</a></li>
+        <li><a href="#sms-intelligence" class="mobile-nav-link">📩 Features</a></li>
+        <li><a href="#bharat-hub" class="mobile-nav-link">🤝 Bharat Hub</a></li>
+        <li><a href="#security" class="mobile-nav-link">🛡️ Security Vault</a></li>
+        <li><a href="#support" class="mobile-nav-link">💬 Support &amp; Legal</a></li>
+        <li><a href="privacy.html" class="mobile-nav-link">📜 Privacy Policy</a></li>
+        <li><a href="terms.html" class="mobile-nav-link">⚖️ Terms &amp; Conditions</a></li>
+        <li><a href="downloads/aftermath-v2.4.0.apk" download class="mobile-nav-link highlight">⬇️ Download Android APK (54.0 MB)</a></li>
+      </ul>
     </div>
   </header>
 
@@ -366,7 +385,7 @@
                 <!-- Dynamically populated -->
               </div>
 
-              <form id="khata-add-form" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr auto; gap: 8px;">
+              <form id="khata-add-form" class="khata-add-form">
                 <input type="text" id="khata-name" class="input-field" placeholder="Person / Vendor" required>
                 <input type="number" id="khata-amount" class="input-field" placeholder="Amount (₹)" required>
                 <select id="khata-type" class="input-field">
@@ -510,7 +529,7 @@
 
           <div class="apk-meta-badges">
             <span class="apk-badge">📦 Version: 2.4.0 (Production)</span>
-            <span class="apk-badge">💾 File Size: 56.8 MB</span>
+            <span class="apk-badge">💾 File Size: 54.0 MB</span>
             <span class="apk-badge">🤖 Android 8.0 - 15+</span>
             <span class="apk-badge">🔒 SHA-256 Verified</span>
           </div>
@@ -527,19 +546,19 @@
         </div>
 
         <div class="install-guide">
-          <div class="install-guide-title">📲 3-Step Sideload Instructions:</div>
+          <div class="install-guide-title">📲 3-Step Sideload &amp; Play Protect Instructions:</div>
           <ol class="install-steps">
             <li class="install-step">
               <span class="install-step-num">1</span>
-              <span>Tap the download button above to download <code>aftermath-v2.4.0.apk</code> to your device.</span>
+              <span>Tap the download button above to download <code>aftermath-v2.4.0.apk</code> (54 MB) to your device.</span>
             </li>
             <li class="install-step">
               <span class="install-step-num">2</span>
-              <span>Open the downloaded APK and toggle <strong>"Allow from this source"</strong> in Chrome/Files settings.</span>
+              <span>Open the downloaded file. If prompted, toggle <strong>"Allow from this source"</strong> in Chrome/Files settings.</span>
             </li>
             <li class="install-step">
               <span class="install-step-num">3</span>
-              <span>Tap <strong>Install</strong>. Open Aftermath, grant SMS permission if you want automatic spend tracking, and start budgeting!</span>
+              <span>If Google Play Protect warns <em>"Unrecognised app"</em>, tap <strong>"More details"</strong> ➔ <strong>"Install anyway"</strong>. Open Aftermath and enjoy seamless offline budgeting!</span>
             </li>
           </ol>
         </div>
