@@ -1,0 +1,21 @@
+{
+  "name": "aftermath-website",
+  "version": "1.0.0",
+  "description": "Official showcase website & APK download portal for Aftermath",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "aftermath",
+    "expense-tracker",
+    "fintech",
+    "android-apk",
+    "sms-parser",
+    "khata",
+    "render-free-tier"
+  ],
+  "author": "Sarvesh Joshi",
+  "license": "MIT"
+}

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aftermath • Smart Financial Operating System & Expense Vault</title>
+  <meta name="description" content="Aftermath: The smart, privacy-first financial operating system for modern India. Automated Indian bank SMS parsing, offline-first expense vault, Bharat Khata Udhar tracking, and WhatsApp CRM bot.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-group">
+        <div class="brand-icon-box">
+          <img src="assets/icon.png" alt="Aftermath Logo">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Aftermath</span>
+          <span class="brand-tag">Financial OS</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#simulator" class="nav-link">Live MVPs</a></li>
+          <li><a href="#sms-intelligence" class="nav-link">SMS Intelligence</a></li>
+          <li><a href="#bharat-hub" class="nav-link">Bharat Hub</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#deployment" class="nav-link">Deploy on Render</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/SarveshJoshi242/ExpenseTrackerWebsite" target="_blank" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="#download" class="btn btn-emerald btn-sm">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          Download APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-row">
+          <span class="badge-pill badge-emerald">
+            <span class="pulse-dot"></span>
+            Production v2.4.0 Native Release
+          </span>
+          <span class="badge-pill badge-indigo">
+            🇮🇳 Built for Modern India
+          </span>
+        </div>
+
+        <h1 class="hero-title">
+          Master Your Money in the <span class="gradient-text">Aftermath</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          The privacy-first financial operating system for individuals, freelancers, and small businesses. Featuring automated bank SMS parsing, offline-first encrypted vault, Hisab-Kitab Khata, and WhatsApp conversational AI.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#download" class="btn btn-emerald btn-lg">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Download APK (Android • 55MB)
+          </a>
+          <a href="#simulator" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Try Live Interactive MVPs
+          </a>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            100% On-Device SMS Privacy
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Render Free Tier Ready
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Zero Ad-Trackers
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Phone Mockup -->
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="screen-header">
+              <span class="screen-brand">Aftermath</span>
+              <span class="badge-pill badge-emerald" style="font-size: 0.65rem; padding: 2px 8px;">Active Vault</span>
+            </div>
+
+            <!-- Total Balance Card -->
+            <div class="screen-card">
+              <div class="screen-card-label">Total Vault Balance</div>
+              <div class="screen-card-balance" id="phone-card-balance">₹26,700</div>
+              <div class="screen-card-stats">
+                <div>
+                  <span style="opacity: 0.7;">Income</span>
+                  <div class="screen-card-stat-val" style="color: #6ee7b7;">₹45,000</div>
+                </div>
+                <div style="text-align: right;">
+                  <span style="opacity: 0.7;">Expense</span>
+                  <div class="screen-card-stat-val" style="color: #fca5a5;">₹18,300</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="screen-actions">
+              <div class="screen-action-btn">
+                <span>⚡</span> AI Smart Add
+              </div>
+              <div class="screen-action-btn">
+                <span>🛡️</span> Bharat Hub
+              </div>
+            </div>
+
+            <!-- Recent Live Items -->
+            <div class="screen-section-title">Live Vault Transactions</div>
+            <div class="screen-tx-list">
+              <div class="screen-tx-item">
+                <div class="screen-tx-info">
+                  <div class="screen-tx-icon" style="background: #ecfdf5;">💼</div>
+                  <div>
+                    <strong style="color: #0f172a;">Monthly Salary</strong>
+                    <div style="font-size: 0.7rem; color: #64748b;">Bank Transfer</div>
+                  </div>
+                </div>
+                <span class="screen-tx-amount" style="color: #059669;">+₹45,000</span>
+              </div>
+              <div class="screen-tx-item">
+                <div class="screen-tx-info">
+                  <div class="screen-tx-icon" style="background: #fef2f2;">🏠</div>
+                  <div>
+                    <strong style="color: #0f172a;">House Rent</strong>
+                    <div style="font-size: 0.7rem; color: #64748b;">UPI Transfer</div>
+                  </div>
+                </div>
+                <span class="screen-tx-amount" style="color: #ef4444;">-₹14,000</span>
+              </div>
+              <div class="screen-tx-item">
+                <div class="screen-tx-info">
+                  <div class="screen-tx-icon" style="background: #fef2f2;">🥦</div>
+                  <div>
+                    <strong style="color: #0f172a;">Kirana Store</strong>
+                    <div style="font-size: 0.7rem; color: #64748b;">Bank SMS</div>
+                  </div>
+                </div>
+                <span class="screen-tx-amount" style="color: #ef4444;">-₹2,450</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive MVPs Section -->
+  <section id="simulator" class="section section-subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Working Prototypes</span>
+        <h2 class="section-title">Experience Aftermath in Action</h2>
+        <p class="section-desc">
+          Test drive our live financial modules directly in your browser. Real calculations, zero mock screens.
+        </p>
+      </div>
+
+      <div class="mvp-wrapper">
+        <!-- Navigation Tabs -->
+        <div class="mvp-tabs">
+          <button class="mvp-tab-btn active" data-tab="tab-simulator">
+            <span>📊</span> 1. Expense Vault Simulator
+          </button>
+          <button class="mvp-tab-btn" data-tab="tab-sms">
+            <span>📩</span> 2. Bank SMS Parser
+          </button>
+          <button class="mvp-tab-btn" data-tab="tab-khata">
+            <span>🤝</span> 3. Bharat Hisab-Kitab
+          </button>
+          <button class="mvp-tab-btn" data-tab="tab-budget">
+            <span>🎯</span> 4. 50/30/20 Safe Spend
+          </button>
+        </div>
+
+        <!-- Tab 1: Expense Simulator -->
+        <div id="tab-simulator" class="mvp-tab-content active">
+          <div class="sim-grid">
+            <div>
+              <!-- Financial HUD -->
+              <div class="sim-hud">
+                <div class="sim-hud-card">
+                  <span class="sim-hud-label">Vault Balance</span>
+                  <div class="sim-hud-value balance" id="sim-hud-balance">₹26,700</div>
+                </div>
+                <div class="sim-hud-card">
+                  <span class="sim-hud-label">Total Inflow</span>
+                  <div class="sim-hud-value income" id="sim-hud-income">₹45,000</div>
+                </div>
+                <div class="sim-hud-card">
+                  <span class="sim-hud-label">Total Outflow</span>
+                  <div class="sim-hud-value expense" id="sim-hud-expense">₹18,300</div>
+                </div>
+              </div>
+
+              <!-- Quick Spends -->
+              <div class="quick-spends-title">⚡ 1-Tap Quick Spends (Simulated):</div>
+              <div class="quick-spends-row">
+                <button class="spend-chip" data-title="Chai & Snacks" data-amount="20" data-cat="Food & Dining" data-icon="☕">
+                  ☕ Chai ₹20
+                </button>
+                <button class="spend-chip" data-title="Auto Rickshaw" data-amount="60" data-cat="Transport & Fuel" data-icon="🛺">
+                  🛺 Auto ₹60
+                </button>
+                <button class="spend-chip" data-title="Blinkit Groceries" data-amount="340" data-cat="Groceries & Kirana" data-icon="🥦">
+                  🥦 Kirana ₹340
+                </button>
+                <button class="spend-chip" data-title="Swiggy Lunch" data-amount="260" data-cat="Food & Dining" data-icon="🍽️">
+                  🍽️ Lunch ₹260
+                </button>
+                <button class="spend-chip" data-title="Mobile Plan Recharge" data-amount="299" data-cat="Utilities & Bills" data-icon="⚡">
+                  ⚡ Recharge ₹299
+                </button>
+                <button class="spend-chip" data-title="Freelance Payment" data-amount="15000" data-type="credit" data-cat="Income" data-icon="💰">
+                  💰 Freelance +₹15,000
+                </button>
+              </div>
+
+              <!-- Custom Entry Form -->
+              <div class="custom-entry-box">
+                <form id="sim-custom-form" class="entry-form-row">
+                  <input type="text" id="sim-input-title" class="input-field" placeholder="Transaction title (e.g. Petrol)" required>
+                  <input type="number" id="sim-input-amount" class="input-field" placeholder="Amount (₹)" required>
+                  <select id="sim-input-type" class="input-field">
+                    <option value="debit">Debit (Expense)</option>
+                    <option value="credit">Credit (Income)</option>
+                  </select>
+                  <select id="sim-input-cat" class="input-field" style="display: none;">
+                    <option value="Custom Spends">Custom Spends</option>
+                  </select>
+                  <button type="submit" class="btn btn-primary btn-sm" style="height: 44px; padding: 0 16px;">
+                    + Log
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Live Transaction Feed -->
+            <div class="sim-ledger">
+              <div class="sim-ledger-header">
+                <span class="sim-ledger-title">Real-time Transaction Ledger</span>
+                <span class="badge-pill badge-indigo">Auto Synced</span>
+              </div>
+              <div class="sim-ledger-items" id="sim-ledger-list">
+                <!-- Dynamically populated by app.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Bank SMS Parser -->
+        <div id="tab-sms" class="mvp-tab-content">
+          <div class="sms-demo-grid">
+            <div>
+              <div class="sms-presets-title">Choose a sample Indian Bank alert to parse:</div>
+              <div class="sms-preset-buttons">
+                <button class="sms-preset-btn active" data-preset="hdfc">HDFC Bank</button>
+                <button class="sms-preset-btn" data-preset="sbi">SBI Bank</button>
+                <button class="sms-preset-btn" data-preset="icici">ICICI Bank</button>
+                <button class="sms-preset-btn" data-preset="axis">Axis Bank</button>
+                <button class="sms-preset-btn" data-preset="paytm">Paytm UPI</button>
+              </div>
+
+              <textarea id="sms-input-text" class="sms-textarea" spellcheck="false">HDFC Bank: Rs 840.00 debited from a/c **9124 on 17-11-26 to VPA swiggy@icici (UPI Ref 432190821). Bal Rs 38,420.00.</textarea>
+
+              <div style="display: flex; gap: 12px;">
+                <button id="btn-parse-sms" class="btn btn-primary">
+                  <span>⚡ Run Regex Extraction</span>
+                </button>
+                <button id="btn-save-parsed-tx" class="btn btn-emerald">
+                  <span>📥 Save to Aftermath Ledger</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="parser-result-card">
+              <div>
+                <div class="parser-card-top">
+                  <strong style="color: var(--text-primary); font-size: 1.05rem;">Engine Parsing Telemetry</strong>
+                  <span id="parser-res-type" class="parser-pill badge-indigo">DEBIT</span>
+                </div>
+
+                <div class="parser-fields">
+                  <div class="parser-field">
+                    <span class="parser-field-label">Detected Amount</span>
+                    <div id="parser-res-amount" class="parser-field-value" style="color: var(--rose);">₹840</div>
+                  </div>
+                  <div class="parser-field">
+                    <span class="parser-field-label">Payee / Merchant</span>
+                    <div id="parser-res-merchant" class="parser-field-value">swiggy@icici</div>
+                  </div>
+                  <div class="parser-field">
+                    <span class="parser-field-label">Auto Category</span>
+                    <div id="parser-res-category" class="parser-field-value">Food & Dining</div>
+                  </div>
+                  <div class="parser-field">
+                    <span class="parser-field-label">Account Identification</span>
+                    <div id="parser-res-account" class="parser-field-value">A/C **9124</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background: var(--bg-surface); padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-light); font-size: 0.82rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between;">
+                <span>Privacy Assurance: Zero server upload.</span>
+                <span id="parser-res-confidence" style="font-weight: 700; color: var(--emerald-dark);">98% Match</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Bharat Khata -->
+        <div id="tab-khata" class="mvp-tab-content">
+          <div class="khata-grid">
+            <div class="khata-card">
+              <div class="khata-balance-banner">
+                <div>
+                  <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">You Will Receive</span>
+                  <div id="khata-total-get" style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-mono); color: var(--emerald-dark);">₹450</div>
+                </div>
+                <div style="text-align: right;">
+                  <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">You Need to Pay</span>
+                  <div id="khata-total-give" style="font-size: 1.5rem; font-weight: 800; font-family: var(--font-mono); color: var(--rose);">₹4,700</div>
+                </div>
+              </div>
+
+              <div class="khata-list" id="khata-items-container">
+                <!-- Dynamically populated -->
+              </div>
+
+              <form id="khata-add-form" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr auto; gap: 8px;">
+                <input type="text" id="khata-name" class="input-field" placeholder="Person / Vendor" required>
+                <input type="number" id="khata-amount" class="input-field" placeholder="Amount (₹)" required>
+                <select id="khata-type" class="input-field">
+                  <option value="get">Will Get (+)</option>
+                  <option value="give">Will Give (-)</option>
+                </select>
+                <button type="submit" class="btn btn-primary btn-sm">Add</button>
+              </form>
+            </div>
+
+            <div class="whatsapp-preview-box">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.4rem;">💬</span>
+                <strong>WhatsApp Payment Gateway Simulator</strong>
+              </div>
+              <p style="font-size: 0.85rem; opacity: 0.9;">
+                Aftermath automatically crafts personalized UPI payment reminder links that can be dispatched with 1 tap.
+              </p>
+              <div class="whatsapp-bubble" id="whatsapp-preview-msg">
+                Namaste Ramesh Kirana, gentle reminder from Aftermath regarding our pending payment balance of ₹1,200. You can pay directly via UPI.
+              </div>
+              <div style="font-size: 0.75rem; opacity: 0.8;">
+                ✓ Automatic 9:00 PM reconciliation triggers available in the native app.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: 50/30/20 Budget -->
+        <div id="tab-budget" class="mvp-tab-content">
+          <div class="calculator-box">
+            <div class="slider-container">
+              <div class="slider-header">
+                <span class="slider-label">Select Your Monthly Take-Home Income:</span>
+                <span id="budget-income-display" class="slider-display">₹65,000</span>
+              </div>
+              <input type="range" id="budget-income-slider" class="range-slider" min="15000" max="300000" step="5000" value="65000">
+            </div>
+
+            <div class="budget-breakdown-grid">
+              <div class="budget-tier-card">
+                <div class="budget-tier-tag" style="color: var(--primary);">Needs (50%)</div>
+                <div class="budget-tier-val" id="calc-val-needs">₹32,500</div>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">Rent, groceries, utilities & bills</p>
+              </div>
+              <div class="budget-tier-card">
+                <div class="budget-tier-tag" style="color: #f59e0b;">Wants (30%)</div>
+                <div class="budget-tier-val" id="calc-val-wants">₹19,500</div>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">Dining, travel, shopping, entertainment</p>
+              </div>
+              <div class="budget-tier-card">
+                <div class="budget-tier-tag" style="color: var(--emerald-dark);">Savings (20%)</div>
+                <div class="budget-tier-val" id="calc-val-savings">₹13,000</div>
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">SIPs, emergency fund, investments</p>
+              </div>
+              <div class="budget-tier-card highlight">
+                <div class="budget-tier-tag" style="color: var(--emerald-dark);">Daily Safe Spend</div>
+                <div class="budget-tier-val" id="calc-val-daily" style="color: var(--emerald-dark);">₹650 / day</div>
+                <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;">Spend under this daily to hit 100% savings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Section -->
+  <section id="sms-intelligence" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Designed Without Compromise</span>
+        <h2 class="section-title">Engineered for Indian Financial Realities</h2>
+        <p class="section-desc">
+          Most expense trackers fail because manual data entry is tedious. Aftermath automates the workflow while safeguarding complete privacy.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box emerald">📩</div>
+          <h3 class="feature-card-title">Native SMS Reader Module</h3>
+          <p class="feature-card-desc">
+            Directly hooks into Android's native Telephony SMS receiver to detect UPI, ATM, and credit card debit alerts. Works 100% locally on your phone without sending SMS data to any cloud.
+          </p>
+        </div>
+
+        <div class="feature-card" id="bharat-hub">
+          <div class="feature-icon-box indigo">🤝</div>
+          <h3 class="feature-card-title">Bharat Financial Hub</h3>
+          <p class="feature-card-desc">
+            Complete hisab-kitab ledger for shop udhar, friends lending, and domestic staff salaries (maids, cooks, drivers) with 1-tap WhatsApp payment reminders.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box sky">💬</div>
+          <h3 class="feature-card-title">WhatsApp Conversational Bot</h3>
+          <p class="feature-card-desc">
+            Powered by Baileys WhatsApp Web protocol. Message your expenses naturally (e.g. <em>"Chai 20 cash"</em> or <em>"Swiggy 450 upi"</em>) and receive automated 9:00 PM spending check-ins.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box amber">⚡</div>
+          <h3 class="feature-card-title">Offline-First Architecture</h3>
+          <p class="feature-card-desc">
+            Zero dependency on internet connectivity. Your ledger resides in high-speed local storage, automatically reconciling with your MongoDB Atlas cloud when online.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box indigo">🛡️</div>
+          <h3 class="feature-card-title">Multi-Tenant Admin Center</h3>
+          <p class="feature-card-desc">
+            Enterprise dashboard built with React 19 and Vite for overseeing database telemetry, system health, user quotas, and broadcast messaging.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box emerald">📊</div>
+          <h3 class="feature-card-title">Dynamic Spends & AI Caps</h3>
+          <p class="feature-card-desc">
+            Machine learning algorithms learn your frequent spends over time and surface 1-tap micro pills right on your dashboard for instantaneous logging.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download APK Section -->
+  <section id="download" class="section section-subtle">
+    <div class="container">
+      <div class="download-card">
+        <div>
+          <span class="badge-pill badge-emerald" style="margin-bottom: 16px;">Direct APK Download</span>
+          <h2 class="download-info-title">Install Aftermath on Android Today</h2>
+          <p class="download-info-sub">
+            Download the official standalone Android release package. Pre-configured with native SMS scanning, biometric lock, and offline vault.
+          </p>
+
+          <div class="apk-meta-badges">
+            <span class="apk-badge">📦 Version: 2.4.0 (Production)</span>
+            <span class="apk-badge">💾 File Size: 55.1 MB</span>
+            <span class="apk-badge">🤖 Android 8.0 - 15+</span>
+            <span class="apk-badge">🔒 SHA-256 Verified</span>
+          </div>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="downloads/aftermath-v2.4.0.apk" download class="btn btn-emerald btn-lg">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Download aftermath-v2.4.0.apk
+            </a>
+            <a href="https://github.com/SarveshJoshi242/ExpenseTrackerWebsite/releases" target="_blank" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">
+              GitHub Releases
+            </a>
+          </div>
+        </div>
+
+        <div class="install-guide">
+          <div class="install-guide-title">📲 3-Step Sideload Instructions:</div>
+          <ol class="install-steps">
+            <li class="install-step">
+              <span class="install-step-num">1</span>
+              <span>Tap the download button above to download <code>aftermath-v2.4.0.apk</code> to your device.</span>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">2</span>
+              <span>Open the downloaded APK and toggle <strong>"Allow from this source"</strong> in Chrome/Files settings.</span>
+            </li>
+            <li class="install-step">
+              <span class="install-step-num">3</span>
+              <span>Tap <strong>Install</strong>. Open Aftermath, grant SMS permission if you want automatic spend tracking, and start budgeting!</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Render.com Free Tier Deployment Guide -->
+  <section id="deployment" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Zero Cost Cloud Hosting</span>
+        <h2 class="section-title">Host Aftermath API on Render Free Tier</h2>
+        <p class="section-desc">
+          Ready to deploy your own production backend? Follow our 1-click blueprint guide for zero-dollar hosting on Render.com.
+        </p>
+      </div>
+
+      <div class="deploy-steps-grid">
+        <div class="deploy-step-card">
+          <span class="step-number">01</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Connect Git Repository</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+            Fork or push this repository to your GitHub account. Log into <a href="https://render.com" target="_blank" style="color: var(--primary); font-weight: 600;">Render.com</a> and create a free account.
+          </p>
+        </div>
+
+        <div class="deploy-step-card">
+          <span class="step-number">02</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">1-Click Blueprint Deploy</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+            Click <strong>New +</strong> → <strong>Blueprint</strong> on Render. Select your repository. Render automatically reads our included <code>render.yaml</code> file!
+          </p>
+          <div class="code-snippet-box">
+# Automatically detected:
+name: aftermath-api
+plan: free
+healthCheckPath: /api/health
+          </div>
+        </div>
+
+        <div class="deploy-step-card">
+          <span class="step-number">03</span>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 8px;">Configure Environment</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+            Fill in your MongoDB Atlas free cluster URI and choose a JWT secret key. Your API goes live with HTTPS in under 2 minutes!
+          </p>
+          <div class="code-snippet-box">
+MONGODB_URI=mongodb+srv://...
+JWT_SECRET=super_secure_key
+ADMIN_EMAIL=admin@aftermath.app
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Architecture -->
+  <section id="architecture" class="section section-subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Full Stack Architecture</span>
+        <h2 class="section-title">Engineered for Performance & Resiliency</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px;">
+          <strong style="color: var(--primary); font-size: 1.1rem; display: block; margin-bottom: 8px;">📱 Mobile Client</strong>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">React Native Expo SDK 52, TypeScript, React Native Reanimated 3, MMKV local cache.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px;">
+          <strong style="color: var(--emerald-dark); font-size: 1.1rem; display: block; margin-bottom: 8px;">⚙️ Backend Engine</strong>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Node.js ES Modules, Express 4, Mongoose ODM, Helmet security, JWT authorization.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px;">
+          <strong style="color: #0ea5e9; font-size: 1.1rem; display: block; margin-bottom: 8px;">🗄️ Database Vault</strong>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">MongoDB Atlas M0 Free Tier with compound indexes for lightning fast aggregation.</p>
+        </div>
+        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 24px;">
+          <strong style="color: #8b5cf6; font-size: 1.1rem; display: block; margin-bottom: 8px;">💬 WhatsApp Gateway</strong>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Baileys WebSocket engine providing natural text NLP & 9:00 PM automated cron check-ins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-group" style="margin-bottom: 14px;">
+            <div class="brand-icon-box">
+              <img src="assets/icon.png" alt="Aftermath">
+            </div>
+            <span class="brand-name">Aftermath</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 320px; line-height: 1.6;">
+            Next-generation Indian financial operating system. Built for speed, privacy, and seamless automation.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Live MVPs</h4>
+          <ul class="footer-links">
+            <li><a href="#simulator" class="footer-link">Expense Simulator</a></li>
+            <li><a href="#simulator" class="footer-link">SMS Parser Demo</a></li>
+            <li><a href="#simulator" class="footer-link">Bharat Hisab-Kitab</a></li>
+            <li><a href="#simulator" class="footer-link">50/30/20 Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="downloads/aftermath-v2.4.0.apk" download class="footer-link">Download Android APK</a></li>
+            <li><a href="#deployment" class="footer-link">Render Deploy Guide</a></li>
+            <li><a href="https://github.com/SarveshJoshi242/ExpenseTrackerWebsite" target="_blank" class="footer-link">Website Repository</a></li>
+            <li><a href="https://github.com/SarveshJoshi242/ExpenseTracker" target="_blank" class="footer-link">Main App Repository</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Author & Support</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/SarveshJoshi242" target="_blank" class="footer-link">@SarveshJoshi242</a></li>
+            <li><a href="mailto:admin@aftermath.app" class="footer-link">admin@aftermath.app</a></li>
+            <li><span style="font-size: 0.85rem; color: var(--text-muted);">MIT Licensed Open Source</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Aftermath • Built by Sarvesh Joshi. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#simulator" class="footer-link">Simulator</a>
+          <a href="#download" class="footer-link">APK Download</a>
+          <a href="#deployment" class="footer-link">Render Blueprint</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>

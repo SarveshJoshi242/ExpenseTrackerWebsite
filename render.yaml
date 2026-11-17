@@ -1,0 +1,10 @@
+services:
+  - type: static
+    name: aftermath-website
+    plan: free
+    publishPath: .
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
