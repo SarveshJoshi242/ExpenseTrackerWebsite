@@ -19,13 +19,13 @@ This website includes 4 live functional simulators:
 ## 📱 Download Android APK
 
 The verified production APK package is hosted directly in this repository:
-- **File:** [`downloads/aftermath-v2.5.0.apk`](downloads/aftermath-v2.5.0.apk)
-- **Version:** `v2.5.0 (Native Production)`
-- **File Size:** `68.3 MB`
+- **File:** [`downloads/aftermath-v2.5.1.apk`](downloads/aftermath-v2.5.1.apk)
+- **Version:** `v2.5.1 (Native Production)`
+- **File Size:** `68.0 MB`
 - **Supported OS:** Android 8.0 (Oreo) through Android 15+
 
 ### Installation Guide:
-1. Download `aftermath-v2.5.0.apk` onto your Android phone.
+1. Download `aftermath-v2.5.1.apk` onto your Android phone.
 2. When prompted, permit Chrome or Files to **"Install unknown apps"**.
 3. Tap **Install** and launch Aftermath!
 

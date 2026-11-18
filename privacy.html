@@ -137,11 +137,11 @@
       <li><strong>Account Details:</strong> Your name, unique email address, bcrypt-hashed password (never stored in plain text), and optional profile avatar.</li>
       <li><strong>Mobile Number:</strong> Your unique mobile number for WhatsApp OTP verification, password recovery, and optional conversational expense logging.</li>
       <li><strong>Financial Records:</strong> Expenses, income, categories, payment modes, budgets, Bharat Khata entries, and staff records that you add or import.</li>
-      <li><strong>Opt-In Bank Alerts:</strong> If you explicitly enable Android Notification Access or share an SMS into Aftermath, only financial transaction alerts are parsed on-device. OTPs, PINs, CVVs, and personal chats are ignored and never stored.</li>
+      <li><strong>On-Device Bank SMS Parsing:</strong> When you paste or share a bank/UPI SMS into Aftermath, only financial transaction alerts are parsed on-device. OTPs, PINs, CVVs, and personal chats are ignored and never stored.</li>
     </ul>
 
     <h2>2. Minimal Android Permissions</h2>
-    <p>Aftermath does <strong>not</strong> request <code>READ_SMS</code>, <code>RECEIVE_SMS</code>, Camera, Microphone, or external storage permissions. PDF statements are saved directly via Android's scoped <code>MediaStore.Downloads</code> API.</p>
+    <p>Aftermath does <strong>not</strong> request <code>READ_SMS</code>, <code>RECEIVE_SMS</code>, <code>BIND_NOTIFICATION_LISTENER_SERVICE</code>, <code>BIND_ACCESSIBILITY_SERVICE</code>, Camera, Microphone, or external storage permissions. PDF statements are saved directly via Android's scoped <code>MediaStore.Downloads</code> API.</p>
 
     <h2>3. Security &amp; Encryption</h2>
     <ul>
@@ -159,7 +159,7 @@
     <h2>5. Your Rights &amp; Data Export</h2>
     <ul>
       <li>Download full Detailed Financial Reports and filtered Transaction History statements as PDF files at any time.</li>
-      <li>Disable Notification Access or WhatsApp notifications at any time from your device settings.</li>
+      <li>Disable app or WhatsApp notifications at any time from your device settings.</li>
       <li>Request permanent deletion of your account and all associated financial data via email.</li>
     </ul>
 
